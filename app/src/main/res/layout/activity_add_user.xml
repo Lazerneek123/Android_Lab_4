@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddUserActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userAddImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <EditText
+                android:id="@+id/textAddUserName"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:maxLength="20"
+                android:layout_height="60dp"
+                android:ems="10"
+                app:layout_constraintTop_toBottomOf="@+id/userAddImage"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:layout_editor_absoluteX="26dp" />
+
+            <EditText
+                android:id="@+id/textAddUserPost"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:maxLength="10"
+                android:ems="10"
+                app:layout_constraintTop_toBottomOf="@+id/textAddUserName"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <EditText
+                android:id="@+id/textAddUserAge"
+                android:layout_width="match_parent"
+                android:maxLength="3"
+                android:inputType="number"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                app:layout_constraintTop_toBottomOf="@+id/textAddUserPost"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <EditText
+                android:id="@+id/textAddUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:maxLength="25"
+                android:ems="10"
+                app:layout_constraintTop_toBottomOf="@+id/textAddUserAge"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <EditText
+                android:id="@+id/textAddUserHobby"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:maxLength="20"
+                android:ems="10"
+                app:layout_constraintTop_toBottomOf="@+id/textAddUserEmail"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <EditText
+                android:id="@+id/textAddUserDescription"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="60dp"
+                android:maxLength="500"
+                android:ems="10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAddUserHobby"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="-30dp"
+                android:text="@string/button_save_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAddUserDescription" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
